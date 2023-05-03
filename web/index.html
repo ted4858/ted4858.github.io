@@ -14,7 +14,7 @@
     This is a placeholder for base href that will be replaced by the value of
     the `--base-href` argument provided to `flutter build`.
   -->
-  <base href="/web/">
+  <base href="./">
 
   <meta charset="UTF-8">
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
@@ -54,5 +54,14 @@
       });
     });
   </script>
+<script type="text/javascript">
+
+                navigator.serviceWorker.register('/myproject/scripts/common/pushNotifications/sw.js').then(function(registration) {
+                console.log('ServiceWorker registration successful with scope: ', registration.scope);
+                     }, function(err) {
+                console.log('ServiceWorker registration failed: ', err);
+                });
+
+        </script>
 </body>
 </html>
